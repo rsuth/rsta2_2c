@@ -98,6 +98,10 @@ int main(){
 
 
 /*============START-FUNCTION-DEFINITIONS==============*/
+
+// NAME: around
+// DESC: moves the char around the board in a spiral pattern
+//		 takes the number of steps to run the loop as a param.
 void around(int steps){
 	RicksMover mover;
 	mover.displayChar = '\002';
@@ -124,6 +128,11 @@ void around(int steps){
 	}
 }
 
+// NAME: step
+// DESC: moves the char around the board in a stepping pattern 
+//       until it hits an obstacle, then moves in the opposite
+//       direction and repeats. param steps is the number of steps 
+//		 the character will take.
 void step(int steps){
 	RicksMover mover;
 	mover.displayChar = '\xFE'; //square block: xFE
@@ -153,6 +162,8 @@ void step(int steps){
 
 }
 
+// NAME: control
+// DESC: allows the char to be controlled by the keyboard arrows.
 void control(){
 	bool quit = false;
 	direction d = NONE;
@@ -194,6 +205,9 @@ void control(){
 	} while (!quit);
 }
 
+// NAME: mainMenu
+// DESC: runs a loop: displays a menu, gets a keyboard selection, 
+//		 and calls the selected function.
 void mainMenu(){
 	
 	bool q = false;
@@ -245,6 +259,9 @@ void mainMenu(){
 
 }
 
+// NAME: jumpDemo
+// DESC: Demonstrates jump function by randomly jumping around
+//		 the board.
 void jumpDemo(){
 	RicksMover j;
 	j.color = 245;
@@ -262,6 +279,8 @@ void jumpDemo(){
 	hitEnter();
 }
 
+// NAME: goodBye
+// DESC: prints a farewell message, the id info, and the stars.
 void goodBye(){
 	
 	vector<string> byeMessage;
