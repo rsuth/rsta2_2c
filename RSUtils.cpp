@@ -95,6 +95,9 @@ direction getDirection(){
 	else if (GetKeyState(VK_DOWN) < 0){
 		return DOWN;
 	}
+	else if (GetKeyState(VK_ESCAPE) < 0){
+		return QUIT;
+	}
 	else
 		return NONE;
 }

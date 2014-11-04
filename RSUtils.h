@@ -3,7 +3,7 @@
 
 using namespace std;
 
-enum direction{LEFT,RIGHT,UP,DOWN,NONE};
+enum direction{LEFT,RIGHT,UP,DOWN,NONE,QUIT};
 
 /****
 *	moveCursor
